@@ -259,12 +259,40 @@ nav a:hover{
 /* COLOUR BLOCKS */
 
 .card-art{
-    height:155px;
-    padding:18px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border-bottom:0;
+    height:220px;
+    position:relative;
+    overflow:hidden;
+    background:var(--plum);
+}
+
+.card-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.card-art::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(73,42,103,.18);
+    pointer-events:none;
+}
+
+.card-art .genre-tag{
+    position:absolute;
+    left:16px;
+    bottom:16px;
+    z-index:2;
+    padding:6px 12px;
+    background:var(--cream);
+    color:var(--plum);
+    border:0;
+    border-radius:20px;
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
 }
 
 .ticket-card:nth-child(9n+1) .card-art{

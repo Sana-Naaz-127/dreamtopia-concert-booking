@@ -4,6 +4,7 @@ const CONCERTS = [
         artist:"Taylor Swift",
         tour:"The Eras Tour",
         genre:"Pop",
+        image: "images/taylorswift.jpg",
         venue:"MMRDA Grounds, Mumbai",
         date:"12 Dec 2026",
         basePrice:4999
@@ -13,6 +14,7 @@ const CONCERTS = [
         artist:"One Direction",
         tour:"Reunion Live",
         genre:"Pop",
+        image: "images/onedirection.webp",
         venue:"DY Patil Stadium, Navi Mumbai",
         date:"18 Jan 2027",
         basePrice:5999
@@ -22,6 +24,7 @@ const CONCERTS = [
         artist:"BTS",
         tour:"Permission to Dance",
         genre:"K-Pop",
+        image: "images/bts.webp",
         venue:"JLN Stadium, Delhi",
         date:"02 Feb 2027",
         basePrice:7999
@@ -31,6 +34,7 @@ const CONCERTS = [
         artist:"Seventeen",
         tour:"Follow Tour",
         genre:"K-Pop",
+        image: "images/seventeen.webp",
         venue:"JLN Indoor Stadium, Chennai",
         date:"09 Mar 2027",
         basePrice:6499
@@ -40,6 +44,7 @@ const CONCERTS = [
         artist:"Ariana Grande",
         tour:"Eternal Sunshine Tour",
         genre:"Pop",
+        image: "images/arianegrande.webp",
         venue:"MMRDA Grounds, Mumbai",
         date:"30 Nov 2026",
         basePrice:5499
@@ -49,6 +54,7 @@ const CONCERTS = [
         artist:"Arijit Singh",
         tour:"Live in Concert",
         genre:"Playback",
+        image: "images/arijit.webp",
         venue:"Gachibowli Stadium, Hyderabad",
         date:"20 Dec 2026",
         basePrice:3499
@@ -58,6 +64,7 @@ const CONCERTS = [
         artist:"Shreya Ghosal",
         tour:"Melodies of the Heart",
         genre:"Playback",
+        image: "images/shreya.webp",
         venue:"Nehru Centre, Mumbai",
         date:"05 Jan 2027",
         basePrice:2999
@@ -67,6 +74,7 @@ const CONCERTS = [
         artist:"Coldplay",
         tour:"Music of the Spheres",
         genre:"Rock",
+        image: "images/coldplay.webp",
         venue:"Narendra Modi Stadium, Ahmedabad",
         date:"20 Feb 2027",
         basePrice:8999
@@ -76,6 +84,7 @@ const CONCERTS = [
         artist:"Ed Sheeran",
         tour:"Mathematics Tour",
         genre:"Acoustic",
+        image: "images/edsheeran.jpeg",
         venue:"M. Chinnaswamy Stadium, Bengaluru",
         date:"15 Mar 2027",
         basePrice:4499
@@ -266,22 +275,13 @@ function renderGrid(){
             .padStart(2,"0");
 
 
-        card.innerHTML = `
+            card.innerHTML = `
+                <div class="card-art">
+                    <img src="${concert.image}" alt="${concert.artist}">
+                    <span class="genre-tag">${concert.genre}</span>
+                </div>
 
-            <div class="card-art">
-
-                <span class="card-number">
-                    ${number}
-                </span>
-
-                <span class="genre-tag">
-                    ${concert.genre}
-                </span>
-
-            </div>
-
-
-            <div class="card-body">
+                <div class="card-body">
 
                 <h3>
                     ${concert.artist}
